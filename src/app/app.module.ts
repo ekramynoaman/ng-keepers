@@ -1,3 +1,4 @@
+import { PostsService } from './shared/services/posts.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
