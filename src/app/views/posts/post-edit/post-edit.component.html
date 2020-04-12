@@ -1,0 +1,30 @@
+<div class="jumbotron">
+    <h1 class="display-3">Update Post</h1>
+  
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="updateForm" class="form-group" (submit)="submit()">
+                <div class="form-group">
+                <label for="postTitle">title</label>
+                <input type="text" formControlName="title" id="postTitle" class="form-control" placeholder="Enter Title" aria-describedby="helpId"
+                [ngClass]="{'is-invalid':submitted && f.title.errors }"
+                [(ngModel)]="postDetails.title">
+                <div *ngIf="submitted && f.title.errors" class="invalid-feedback"></div>
+            </div>
+                <div class="form-group">
+                <label for="postDesc">description</label>
+                <textarea formControlName="description" id="postDesc" cols="30" rows="10" class="form-control" placeholder="Enter Descriotion"
+                [ngClass]="{'is-invalid':submitted && f.description.errors }"
+                [(ngModel)]="postDetails.description" ></textarea>
+                <div *ngIf="submitted && f.description.errors" class="invalid-feedback"></div>
+
+            </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+
+        </div>
+    </div>
+</div>
